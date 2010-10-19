@@ -1,0 +1,11 @@
+=pod
+=head1 ZeroBot in C++
+   Why did we choose C++? Perl was getting boring, and we really don't
+   know C++, so why not try it? This is going to suck ass bigtime,
+   so you should probably stick with ZeroBot in Perl. This will
+   improve over time.
+
+   C++ is also object oriented, which is awesome, and we'd all like to
+   learn that.
+
+=cut
