@@ -11,7 +11,6 @@ me_t me;
 server_t irc;
 
 /* Bot Configuration */
-int main() {
    me.nick 	   = "DeltronZero";
    me.gecos	   = "Demon Days";
    me.ident	   = "dare";
@@ -23,4 +22,3 @@ int main() {
    irc.address	= "irc.alphachat.net";
    irc.port 	= 6667;
    irc.ssl		= 0;
-}
