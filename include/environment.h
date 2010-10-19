@@ -6,6 +6,7 @@
 #ifndef __ENVIRONMENT_H
 #define __ENVIRONMENT_H
 #include <string>
+
 using namespace std;
 
 struct me_t {
@@ -19,7 +20,7 @@ struct me_t {
 struct server_t {
    string address;
    int ssl;
-   int port;
+   string port; // sock can't read this as an int ... ?
 };
 
 struct channel_t {

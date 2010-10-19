@@ -6,10 +6,9 @@
 
 #include "includes.h"
 #include "environment.h"
-
 me_t me;
 server_t irc;
-
+int conf() {
 /* Bot Configuration */
    me.nick 	   = "DeltronZero";
    me.gecos	   = "Demon Days";
@@ -20,5 +19,6 @@ server_t irc;
 /* Server Configuration */
 
    irc.address	= "irc.alphachat.net";
-   irc.port 	= 6667;
+   irc.port 	= "6667";
    irc.ssl		= 0;
+}
