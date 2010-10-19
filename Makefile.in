@@ -48,7 +48,7 @@ CONFIG_CLEAN_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
 PROGRAMS = $(bin_PROGRAMS)
-am_akeldema_OBJECTS = main.$(OBJEXT)
+am_akeldema_OBJECTS = main.$(OBJEXT) socket.$(OBJEXT)
 akeldema_OBJECTS = $(am_akeldema_OBJECTS)
 akeldema_LDADD = $(LDADD)
 DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)/include
@@ -165,7 +165,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-akeldema_SOURCES = akeldema.h environment.h config.h src/main.cpp
+akeldema_SOURCES = akeldema.h SocketException.h environment.h config.h Socket.h SocketError.h src/main.cpp src/socket.cpp
 all: all-am
 
 .SUFFIXES:
@@ -254,6 +254,7 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/socket.Po@am__quote@
 
 .cpp.o:
 @am__fastdepCXX_TRUE@	$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -282,6 +283,20 @@ main.obj: src/main.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='src/main.cpp' object='main.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o main.obj `if test -f 'src/main.cpp'; then $(CYGPATH_W) 'src/main.cpp'; else $(CYGPATH_W) '$(srcdir)/src/main.cpp'; fi`
+
+socket.o: src/socket.cpp
+@am__fastdepCXX_TRUE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT socket.o -MD -MP -MF $(DEPDIR)/socket.Tpo -c -o socket.o `test -f 'src/socket.cpp' || echo '$(srcdir)/'`src/socket.cpp
+@am__fastdepCXX_TRUE@	mv -f $(DEPDIR)/socket.Tpo $(DEPDIR)/socket.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='src/socket.cpp' object='socket.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o socket.o `test -f 'src/socket.cpp' || echo '$(srcdir)/'`src/socket.cpp
+
+socket.obj: src/socket.cpp
+@am__fastdepCXX_TRUE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -MT socket.obj -MD -MP -MF $(DEPDIR)/socket.Tpo -c -o socket.obj `if test -f 'src/socket.cpp'; then $(CYGPATH_W) 'src/socket.cpp'; else $(CYGPATH_W) '$(srcdir)/src/socket.cpp'; fi`
+@am__fastdepCXX_TRUE@	mv -f $(DEPDIR)/socket.Tpo $(DEPDIR)/socket.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	source='src/socket.cpp' object='socket.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCXX_FALSE@	$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS) -c -o socket.obj `if test -f 'src/socket.cpp'; then $(CYGPATH_W) 'src/socket.cpp'; else $(CYGPATH_W) '$(srcdir)/src/socket.cpp'; fi`
 
 ID: $(HEADERS) $(SOURCES) $(LISP) $(TAGS_FILES)
 	list='$(SOURCES) $(HEADERS) $(LISP) $(TAGS_FILES)'; \
