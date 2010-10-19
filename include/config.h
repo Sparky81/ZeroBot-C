@@ -5,9 +5,10 @@
  */
 
 #include "includes.h"
-#include "environment.h"
+
 me_t me;
 server_t irc;
+
 int conf() {
 /* Bot Configuration */
    me.nick 	   = "DeltronZero";

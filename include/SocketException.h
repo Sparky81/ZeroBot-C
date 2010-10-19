@@ -1,5 +1,6 @@
-#ifndef SocketException_class
-#define SocketException_class
+
+#ifndef __SOCKETEXCEPTION_H
+#define __SOCKETEXCEPTION_H
 
 #include <string>
 

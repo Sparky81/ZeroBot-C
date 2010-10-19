@@ -24,9 +24,22 @@ struct server_t {
 };
 
 struct channel_t {
-   string c;
+   string name;
    string topic;
+	string privmsg;
    int users;
 };
+
+struct mask_t {
+   string nick;
+   string user;
+   string host;
+};
+
+struct message_t {
+	string privmsg;
+	string notice;
+};
+
 
 #endif

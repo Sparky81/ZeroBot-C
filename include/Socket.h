@@ -1,15 +1,9 @@
 /* Socket.h */
 
-#ifndef Socket_class
-#define Socket_class
+#ifndef __SOCKET_H
+#define __SOCKET_H
 
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netdb.h>
-#include <unistd.h>
-#include <string>
-#include <arpa/inet.h>
+#include "includes.h"
 
 const int MAXHOSTNAME = 200;
 const int MAXCONNECTIONS = 5;

@@ -1,6 +1,20 @@
-/* Socket.cpp */
+/*
+ * Socket Handler
+ *
+ * Base written by Rob Tougher
+ *
+ * Bug; Does not connect to the socket at all,
+ * it only prints an error, but no error actually
+ * exists.
+ */
 
-#include "include/includes.h"
+#include "Socket.h"
+#include "string.h"
+#include <string.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <iostream>
+
 
 Socket::Socket(const std::string s, const std::string p) : m_sock(-1), server(s), port(p)
 {
@@ -62,7 +76,7 @@ const Socket& Socket::operator >> (std::string& s) const
   memset ( buf, 0, MAXRECV + 1 );
   ::recv ( m_sock, buf, MAXRECV, 0 );
   s = buf;
-  std::cout << ">> " + s << "\n";
+  //std::cout << ">> " + s << "\n";
   return *this;
 }
 
