@@ -3,7 +3,9 @@
  *
  * Your ZeroBot configuration!
  */
-#include "zero.h"
+#include "akeldema.h"
+#ifndef __CONFIG_H
+#define __CONFIG_H
 
 /* Bot Configuration */
 

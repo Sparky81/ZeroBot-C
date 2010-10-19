@@ -6,8 +6,7 @@
 // Description : ZeroBot Core File
 //============================================================================
 
-#include "lib/zero.h"
-#include "lib/config.h"
+#include "include/akeldema.h"
 
 void fail(char *zero) {
 	perror(zero);

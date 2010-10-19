@@ -3,8 +3,8 @@
  *
  * Construct the IRC Environment!
  */
-#ifndef ENVIRONMENT_HEADER_H
-#define ENVIRONMENT_HEADER_H
+#ifndef __ENVIRONMENT_H
+#define __ENVIRONMENT_H
 
 struct me_t {
    char *nick;
