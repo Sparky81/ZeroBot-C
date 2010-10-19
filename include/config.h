@@ -3,20 +3,23 @@
  *
  * Your ZeroBot configuration!
  */
-#include "akeldema.h"
-#ifndef __CONFIG_H
-#define __CONFIG_H
+#include "includes.h"
+#include "environment.h"
+
+me_t me;
+server_t irc;
 
 /* Bot Configuration */
-
-me.nick 	= "DeltronZero";
-me.gecos	= "Demon Days";
-me.ident	= "dare";
-me.channel	= "#ZeroBot";
-me.trigger 	= '!';
+int main() {
+   me.nick 	   = "DeltronZero";
+   me.gecos	   = "Demon Days";
+   me.ident	   = "dare";
+   me.channel	= "#ZeroBot";
+   me.trigger 	= '!';
 
 /* Server Configuration */
 
-irc.address	= "irc.alphachat.net";
-irc.port	= 6667;
-irc.ssl		= 0;
+   irc.address	= "irc.alphachat.net";
+   irc.port 	= 6667;
+   irc.ssl		= 0;
+}

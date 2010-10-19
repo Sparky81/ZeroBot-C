@@ -1,3 +1,0 @@
-main.o: src/main.cpp include/akeldema.h
-
-include/akeldema.h:

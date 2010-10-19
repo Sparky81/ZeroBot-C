@@ -5,24 +5,27 @@
  */
 #ifndef __ENVIRONMENT_H
 #define __ENVIRONMENT_H
+#include <string>
+using namespace std;
 
 struct me_t {
-   char *nick;
-   char *ident;
-   char *gecos;
-   char *channel;
-} me;
+   string nick;
+   string ident;
+   string gecos;
+   string channel;
+   char trigger;
+};
 
 struct server_t {
-   char *address;
+   string address;
    int ssl;
    int port;
-} irc;
+};
 
 struct channel_t {
-   char *c;
-   char *topic;
+   string c;
+   string topic;
    int users;
-} channel;
+};
 
 #endif
