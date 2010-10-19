@@ -19,7 +19,7 @@ bool Socket::get_address()
 {
   int rv = 1;
   rv = getaddrinfo(server.c_str(), port.c_str(), &hints, &servinfo);
-// for debugging:  fprintf(stderr, "getaddrinfo: %i\n", rv);
+  fprintf(stderr, "getaddrinfo: %i\n", rv);
   if (rv != 0) return false;
   return true;
 }

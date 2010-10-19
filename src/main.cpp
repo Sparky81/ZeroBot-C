@@ -9,14 +9,15 @@
 
 using namespace std;
 
-int main ()
+int main()
 {
    try
    {
+      cout << ("IRC: %s, PORT:, %s", irc.address, irc.port);
       Socket sock(irc.address, irc.port);
-      if (!sock.get_address()) throw SocketException ("Could not connect to %s:%s.", irc.address, irc.port);
+/*      if (!sock.get_address()) throw SocketException ("Could not connect to %s:%s.", irc.address, irc.port);
       if (!sock.connect()) throw SocketException ("Could not connect to %s:%s.", irc.address, irc.port);
-
+*/
       string reply;
 
       sock >> reply;
